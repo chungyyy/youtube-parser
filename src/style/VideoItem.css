@@ -1,0 +1,21 @@
+.video-li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 4px;
+  width: 320px;
+  text-align: center;
+  justify-content: center;
+}
+
+.video-item-title {
+  flex-grow: 1;
+  margin-top: 6px;
+  padding-bottom: 16px;
+}
+
+.video-item-img {
+  max-height: 180px;
+  margin-bottom: 6px;
+}

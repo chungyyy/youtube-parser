@@ -1,0 +1,20 @@
+.search-container {
+  display: flex;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+}
+
+.fa-search {
+  color: grey;
+  text-align: center;
+  cursor: pointer;
+  margin-left: -20px;
+  margin-top: 2px;
+}
+
+.input-bar {
+  min-width: 500px;
+  outline: none;
+}

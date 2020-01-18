@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Karla|Lato|Roboto&display=swap');
+
+html {
+  font-family: 'Karla', sans-serif;
+}
+
+.search-explaination {
+  display: flex;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+}
