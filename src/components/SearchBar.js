@@ -5,13 +5,11 @@ function SearchBar({
   handleSubmit,
   channelIdQuery,
   setChannelIdQuery,
-  setSelectType
+  setSelectType,
 }) {
-
-  const handleSelect = (e) => {
+  const handleSelect = e => {
     setSelectType(e.target.value);
-    console.log(e.target.value)
-  }
+  };
 
   return (
     <form className="search-container" onSubmit={handleSubmit}>

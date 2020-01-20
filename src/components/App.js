@@ -8,14 +8,13 @@ import "../style/App.css";
 function App() {
   const [channelIdQuery, setChannelIdQuery] = useState("");
   const [selectType, setSelectType] = useState("channelId");
-  const [{ data, isLoading }, setSearch] = useYouTubeAPI(selectType);
+  const [{ data, isLoading, error }, { setSearch }] = useYouTubeAPI(selectType);
 
   const handleSubmit = e => {
     e.preventDefault();
     setSearch(channelIdQuery);
     setChannelIdQuery("");
   };
-  console.log(data);
 
   return (
     <div className="App-container">
@@ -25,6 +24,10 @@ function App() {
         channelIdQuery={channelIdQuery}
         setChannelIdQuery={setChannelIdQuery}
       />
+      <div className="search-explaination">
+        {error &&
+          "an error has occurred, perhaps you've selected the wrong search option?"}
+      </div>
       <h5 className="search-explaination">
         Example: youtube.com/user/TechGuyWeb/; "TechGuyWeb" would be the
         username or youtube.com/channel/UCtJZYz0Hqh4rlKS_vYi3Fkw/;
