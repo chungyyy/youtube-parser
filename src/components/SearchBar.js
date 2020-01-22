@@ -5,7 +5,7 @@ function SearchBar({
   handleSubmit,
   channelIdQuery,
   setChannelIdQuery,
-  setSelectType,
+  setSelectType
 }) {
   const handleSelect = e => {
     setSelectType(e.target.value);
