@@ -15,7 +15,7 @@ export const useYouTubeAPI = selectType => {
         if (selectType === "username") {
           const searchResult = await youtube.get("/search", {
             params: {
-              key: process.env.REACT_APP_YOUTUBE_API_KEY,
+              key: "AIzaSyCtPFn4qOOg6tplXa4-VIeHNTygwWsPrY8",
               part: "snippet",
               maxResults: 1,
               q: search,
@@ -27,7 +27,7 @@ export const useYouTubeAPI = selectType => {
 
         const channelResult = await youtube.get("/channels", {
           params: {
-            key: process.env.REACT_APP_YOUTUBE_API_KEY,
+            key: "AIzaSyCtPFn4qOOg6tplXa4-VIeHNTygwWsPrY8",
             part: "contentDetails",
             id: channelId
           }
@@ -42,7 +42,7 @@ export const useYouTubeAPI = selectType => {
         while (toggle) {
           const playlistResult = await youtube.get("/playlistItems", {
             params: {
-              key: process.env.REACT_APP_YOUTUBE_API_KEY,
+              key: "AIzaSyCtPFn4qOOg6tplXa4-VIeHNTygwWsPrY8",
               part: "snippet",
               maxResults: 50,
               playlistId: uploadPlaylistId,
@@ -58,7 +58,6 @@ export const useYouTubeAPI = selectType => {
         setData({ videos: videosArr });
         setIsLoading(false);
       } catch (e) {
-        console.log(e);
         setError(true);
         setIsLoading(false);
       }
