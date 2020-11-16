@@ -25,13 +25,12 @@ function App() {
         setChannelIdQuery={setChannelIdQuery}
       />
       <div className="search-explaination">
-        {error &&
-          "an error has occurred, perhaps you've selected the wrong search option?"}
+        {error}
       </div>
       <h5 className="search-explaination">
         Example: youtube.com/user/TechGuyWeb/; "TechGuyWeb" would be the
         username or youtube.com/channel/UCtJZYz0Hqh4rlKS_vYi3Fkw/;
-        "UCtJZYz0Hqh4rlKS_vYi3Fkw" would be the channelId.
+        "UCtJZYz0Hqh4rlKS_vYi3Fkw" would be the channel Id.
       </h5>
       {isLoading ? (
         <div>loading...</div>

@@ -20,7 +20,7 @@ function SearchBar({
       <input
         className="input-bar"
         type="text"
-        placeholder="Defaulted to PAQ's Channel Id, searching by username is too api quota intensive :("
+        placeholder="Searching by username is too api quota intensive, so it's defaulted to channel Id :("
         value={channelIdQuery}
         onChange={e => setChannelIdQuery(e.target.value)}
       />

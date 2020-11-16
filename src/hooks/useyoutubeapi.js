@@ -11,11 +11,11 @@ export const useYouTubeAPI = selectType => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        let channelId = search || "UCvO6uJUVJQ6SrATfsWR5_aA";
+        let channelId = search || "";
         if (selectType === "username") {
           const searchResult = await youtube.get("/search", {
             params: {
-              key: "AIzaSyCtPFn4qOOg6tplXa4-VIeHNTygwWsPrY8",
+              key: process.env.REACT_APP_YOUTUBE_API_KEY,
               part: "snippet",
               maxResults: 1,
               q: search,
@@ -27,7 +27,7 @@ export const useYouTubeAPI = selectType => {
 
         const channelResult = await youtube.get("/channels", {
           params: {
-            key: "AIzaSyCtPFn4qOOg6tplXa4-VIeHNTygwWsPrY8",
+            key: process.env.REACT_APP_YOUTUBE_API_KEY,
             part: "contentDetails",
             id: channelId
           }
@@ -42,7 +42,7 @@ export const useYouTubeAPI = selectType => {
         while (toggle) {
           const playlistResult = await youtube.get("/playlistItems", {
             params: {
-              key: "AIzaSyCtPFn4qOOg6tplXa4-VIeHNTygwWsPrY8",
+              key: process.env.REACT_APP_YOUTUBE_API_KEY,
               part: "snippet",
               maxResults: 50,
               playlistId: uploadPlaylistId,
